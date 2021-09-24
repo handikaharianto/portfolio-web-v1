@@ -1,0 +1,37 @@
+/* ****** HERO ****** */
+
+.section-hero {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.hero span {
+  color: var(--clr-light-gray);
+  font-size: 0.9rem;
+  font-family: var(--ff-secondary);
+}
+
+.hero__name {
+  letter-spacing: 0.05em;
+}
+
+.hero__desc {
+  margin: 1em 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.socials__link {
+  color: var(--clr-light-gray-2);
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+}
+
+.socials__link:hover {
+  color: var(--clr-light-green);
+}

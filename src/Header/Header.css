@@ -1,0 +1,135 @@
+/* ***** Header Styles ****** */
+
+.section-header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.fixed-header {
+  background-color: var(--clr-dark-gray-2);
+  box-shadow: var(--light-shadow);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  padding: 1em 0;
+}
+
+.nav-toggle {
+  width: 30px;
+  height: 30px;
+  border: transparent;
+  background-color: transparent;
+}
+
+.nav-toggle__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 0.3em 0;
+  background-color: var(--clr-light-green);
+}
+
+.fixed-header .nav-toggle__line {
+  background-color: var(--clr-light-green);
+}
+
+.navbar {
+  position: absolute;
+  top: 80px;
+  left: 0%;
+  width: 100%;
+  height: 0;
+  padding: 0em 1em;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: var(--light-shadow);
+  transition: all 0.3s linear;
+}
+
+.navbar--active {
+  height: 240px;
+  padding: 1em;
+}
+
+.navbar__link {
+  padding: 0.5em 1em;
+}
+
+.navbar__link a {
+  font-size: 0.8rem;
+}
+
+.resume {
+  display: none;
+  border: 2px solid var(--clr-light-green);
+  border-radius: 5px;
+}
+
+.resume__link {
+  display: inline-block;
+  padding: 0.7em 1.8em;
+  color: var(--clr-light-green);
+  font-size: 0.8rem;
+  transition: all 0.3s linear;
+}
+
+.resume__link:hover {
+  color: var(--clr-dark-gray);
+  background-color: var(--clr-light-green);
+}
+
+@media (min-width: 768px) {
+  .resume {
+    display: block;
+  }
+
+  .navbar--active {
+    height: 190px;
+  }
+
+  .navbar__resume {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar {
+    position: relative;
+    top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    height: auto;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .navbar__link {
+    padding: 0;
+  }
+
+  .navbar__link a {
+    color: var(--clr-light-green);
+    font-size: 0.9rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}

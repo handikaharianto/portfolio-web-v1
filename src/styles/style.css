@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+/* ****** Global Styles ***** */
+
+:root {
+  --ff-primary: "Lato", sans-serif;
+  --ff-secondary: "Roboto Mono", monospace;
+
+  --clr-dark-gray: #154166;
+  --clr-dark-gray-2: #184e77;
+  --clr-light-gray: #a8b2d1;
+  --clr-light-gray-2: #ccd6f6;
+  --clr-light-green: #99d98c;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-dark-gray);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--clr-light-green);
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+h5 {
+  font-size: 1rem;
+  font-family: var(--ff-secondary);
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--clr-dark-gray);
+  font-family: var(--ff-secondary);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.section-center {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
