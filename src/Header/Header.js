@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Header.css";
 
 const Header = () => {
   const [isFixedHeader, setIsFixedHeader] = useState(false);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const navbarContainerRef = useRef();
+  const navbarRef = useRef();
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -16,6 +18,16 @@ const Header = () => {
       }
     });
   }, []);
+
+  useEffect(() => {
+    const navbarHeight = navbarRef.current.getBoundingClientRect().height;
+
+    if (isNavbarOpen) {
+      navbarContainerRef.current.style.height = `${navbarHeight}px`;
+    } else {
+      navbarContainerRef.current.style.height = "0px";
+    }
+  }, [isNavbarOpen]);
 
   return (
     <section
@@ -34,30 +46,35 @@ const Header = () => {
           <span className="nav-toggle__line"></span>
           <span className="nav-toggle__line"></span>
         </button>
-        <ul className={"navbar " + (isNavbarOpen ? "navbar--active" : "")}>
-          <li className="navbar__link" data-aos="fade-down-left">
-            <a href="#hero">home</a>
-          </li>
-          <li
-            className="navbar__link"
-            data-aos="fade-down-left"
-            data-aos-delay="100"
+        <div className="navbar-container" ref={navbarContainerRef}>
+          <ul
+            className={"navbar " + (isNavbarOpen ? "navbar--active" : "")}
+            ref={navbarRef}
           >
-            <a href="#skills">skills</a>
-          </li>
-          <li
-            className="navbar__link"
-            data-aos="fade-down-left"
-            data-aos-delay="200"
-          >
-            <a href="#projects">projects</a>
-          </li>
-          <li className="navbar__link navbar__resume">
-            <a href="./resume.html" target="_blank" rel="noreferrer">
-              resume
-            </a>
-          </li>
-        </ul>
+            <li className="navbar__link" data-aos="fade-down-left">
+              <a href="#hero">home</a>
+            </li>
+            <li
+              className="navbar__link"
+              data-aos="fade-down-left"
+              data-aos-delay="100"
+            >
+              <a href="#skills">skills</a>
+            </li>
+            <li
+              className="navbar__link"
+              data-aos="fade-down-left"
+              data-aos-delay="200"
+            >
+              <a href="#projects">projects</a>
+            </li>
+            <li className="navbar__link navbar__resume">
+              <a href="./resume.html" target="_blank" rel="noreferrer">
+                resume
+              </a>
+            </li>
+          </ul>
+        </div>
         <div className="resume">
           <a
             className="resume__link"
