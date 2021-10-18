@@ -17,7 +17,6 @@ const Projects = () => {
             href="https://github.com/handikaharianto"
             target="_blank"
             rel="noreferrer"
-            data-aos="zoom-in"
           >
             show more
           </a>

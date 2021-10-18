@@ -42,9 +42,12 @@ const Header = () => {
           type="button"
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
         >
-          <span className="nav-toggle__line"></span>
-          <span className="nav-toggle__line"></span>
-          <span className="nav-toggle__line"></span>
+          <span
+            className={
+              "nav-toggle__line " +
+              (isNavbarOpen ? "nav-toggle__line--open" : "")
+            }
+          ></span>
         </button>
         <div className="navbar-container" ref={navbarContainerRef}>
           <ul
