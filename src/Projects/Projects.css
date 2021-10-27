@@ -88,7 +88,7 @@
   background-color: var(--clr-light-green);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .project-item {
     position: relative;
     display: grid;
@@ -127,7 +127,7 @@
     padding: 1em;
     border-radius: 5px;
     background-color: var(--clr-dark-gray-2);
-    font-size: clamp(0.8rem, 5vw, 0.9rem);
+    font-size: clamp(0.7rem, 5vw, 0.8rem);
   }
 
   .project-item:nth-child(2n + 1) .project-item__tech-list {
