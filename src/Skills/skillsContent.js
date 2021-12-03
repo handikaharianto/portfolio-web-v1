@@ -24,6 +24,11 @@ const skillsContents = [
     name: "Git",
     img: "images/skills/git_logo.png",
   },
+  {
+    id: 6,
+    name: "Sass",
+    img: "images/skills/sass_logo.png",
+  },
 ];
 
 export default skillsContents;
