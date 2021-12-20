@@ -13,7 +13,8 @@ const Hero = () => {
           Handika Harianto Ew Jong.
         </h2>
         <p className="hero__desc" data-aos="fade-up" data-aos-delay="1000">
-          A Computer Science student<span> @ Asia Pacific University.</span>
+          A Computer Science student
+          <span> @ Asia Pacific University of Technology and Innovation. </span>
         </p>
         <div className="socials" data-aos="fade-up" data-aos-delay="1100">
           <a

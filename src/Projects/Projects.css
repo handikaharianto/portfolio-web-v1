@@ -29,7 +29,7 @@
 
 .project-item__title {
   color: var(--clr-light-gray-2);
-  font-size: clamp(1rem, 5vw, 1.3rem);
+  font-size: clamp(1rem, 4vw, 1.5rem);
   font-weight: 700;
   transition: all 0.3s linear;
 }
@@ -40,8 +40,7 @@
 
 .project-item__desc {
   margin-top: 1.5em;
-  color: var(--clr-light-gray);
-  font-size: 0.8rem;
+  color: var(--clr-light-gray-2);
 }
 
 .project-item__tech-list {
@@ -53,7 +52,7 @@
 
 .project-item__tech-list li {
   color: var(--clr-light-green);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-family: var(--ff-secondary);
 }
 
@@ -64,7 +63,7 @@
 
 .project-item__links a {
   color: var(--clr-light-gray-2);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .project-item__links a:hover {
@@ -80,6 +79,7 @@
   border: 2px solid var(--clr-light-green);
   border-radius: 7px;
   color: var(--clr-light-green);
+  font-size: 1.2rem;
   transition: all 0.3s linear;
 }
 
@@ -127,7 +127,6 @@
     padding: 1em;
     border-radius: 5px;
     background-color: var(--clr-dark-gray-2);
-    font-size: clamp(0.7rem, 5vw, 0.8rem);
   }
 
   .project-item:nth-child(2n + 1) .project-item__tech-list {
