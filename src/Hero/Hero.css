@@ -9,7 +9,7 @@
 .hero span {
   color: var(--clr-light-gray-2);
   font-family: var(--ff-secondary);
-  font-size: 1.05rem;
+  font-size: 0.9rem;
 }
 
 .hero__name {
@@ -18,7 +18,7 @@
 
 .hero__desc {
   margin: 1em 0;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
 }
 
 .socials {
@@ -35,4 +35,14 @@
 
 .socials__link:hover {
   color: var(--clr-light-green);
+}
+
+@media (min-width: 768px) {
+  .hero span {
+    font-size: 1.05rem;
+  }
+
+  .hero__desc {
+    font-size: 1.05rem;
+  }
 }
